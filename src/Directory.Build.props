@@ -8,7 +8,7 @@
     <RepositoryType>git</RepositoryType>
     <Description>Simple REST and HTTP API Client</Description>
     <Authors>John Sheehan, Andrew Young, Alexey Zimarev and RestSharp community</Authors>
-    <AssemblyOriginatorKeyFile>..\..\RestSharp.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\Ladybug.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
     <UpdateVersionProperties>true</UpdateVersionProperties>
@@ -19,8 +19,6 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
-    <PackageReference Include="MinVer" Version="2.3.1" PrivateAssets="All"/>
     <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" PrivateAssets="All"/>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
@@ -34,10 +32,5 @@
     <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
-  <Target Name="CustomVersion" AfterTargets="MinVer">
-    <PropertyGroup>
-      <FileVersion>$(MinVerMajor).$(MinVerMinor).$(MinVerPatch)</FileVersion>
-      <AssemblyVersion>$(MinVerMajor).$(MinVerMinor).$(MinVerPatch)</AssemblyVersion>
-    </PropertyGroup>
-  </Target>
+
 </Project>

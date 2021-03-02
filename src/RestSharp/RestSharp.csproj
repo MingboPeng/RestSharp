@@ -3,6 +3,8 @@
     <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
     <Nullable>enable</Nullable>
+    <PackageId>LBT.RestSharp</PackageId>
+    <Version>106.11.7</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <DefineConstants>$(DefineConstants);NETCORE</DefineConstants>
